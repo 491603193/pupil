@@ -1,5 +1,5 @@
-var session = window.sessionStorage;
-var local = window.localStorage;
+const session = window.sessionStorage;
+const local = window.localStorage;
 const setSessionStorage = function (key, value) {
     if (!key || !value) console.warn('key or value is empty');
     if (typeof value === 'object') {
