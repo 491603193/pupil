@@ -4,6 +4,20 @@ const routes = [
         redirect: '/goods'
     },
     {
+        name: 'hello',
+        component: () => import('../view/app/HelloWorld.vue'),
+        meta: {
+            title: '欢迎'
+        }
+    },
+    {
+        name: 'login',
+        component: () => import('../view/app/Login.vue'),
+        meta: {
+            title: '登陆'
+        }
+    },
+    {
         name: 'index',
         component: () => import('../view/app/Index'),
         meta: {
