@@ -58,7 +58,11 @@
         methods: {
             processButton001() {
                 this.show = true;
+            },
+            openGoodsDetail(){
+                this.$router.push({name: 'goods'});
             }
+
         }
     }
 </script>
