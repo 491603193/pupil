@@ -5,23 +5,22 @@
         class="card-goods__item"
         v-for="item in goods"
         :key="item.id"
-        :name="item.id"
-      >
+        :name="item.id">
         <van-card
           :title="item.title"
           :desc="item.desc"
           :num="item.num"
           :price="formatPrice(item.price)"
-          :thumb="item.thumb"
-        />
+          :thumb="item.thumb">
+        </van-card>
       </van-checkbox>
     </van-checkbox-group>
     <van-submit-bar
       :price="totalPrice"
       :disabled="!checkedGoods.length"
       :button-text="submitBarText"
-      @submit="onSubmit"
-    />
+      @submit="onSubmit">
+    </van-submit-bar>
   </div>
 </template>
 
@@ -69,7 +68,6 @@ export default {
       const count = this.checkedGoods.length;
       return '结算' + (count ? `(${count})` : '');
     },
-
     totalPrice() {
       return this.goods.reduce((total, item) => total + (this.checkedGoods.indexOf(item.id) !== -1 ? item.price : 0), 0);
     }
