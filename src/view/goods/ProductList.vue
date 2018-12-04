@@ -1,5 +1,14 @@
 <template>
     <div class="goods-list" style="height: 100%">
+        <div class="search-wrap horizontal" transition="expand" :v-show="true">
+            <div class="flex-1 horizontal search-border">
+                <div class="icon-search"></div>
+                <div class="flex-1">
+                    <input id="search-input" placeholder="搜索商品" v-model="searchName"/>
+                </div>
+            </div>
+            <a @click=""> <van-icon class="search" name="search" />筛选</a>
+        </div>
         <div style="height: calc(100vh - 53px);">
             <ul>
                 <li v-for="(index,entity) in entities" :key="entity.productId"
@@ -68,6 +77,11 @@
 </script>
 
 <style scoped>
+    .search {
+        width: 26px;
+        height: 26px;
+        top: 1px;
+    }
     .goods-list {
     }
 
@@ -81,7 +95,7 @@
     }
 
     .goods-list li > .horizontal {
-        height: 100px;
+        height: 80px;
     }
 
     .goods-list ul li:last-of-type {
@@ -89,8 +103,8 @@
     }
 
     .goods-list li img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         object-fit: cover;
         margin-right: 10px;
     }
