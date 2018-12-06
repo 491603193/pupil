@@ -24,11 +24,11 @@
           <van-tag class="goods-tag" type="danger">官方</van-tag>
         </template>
       </van-cell>
-      <van-cell title="线下门店" icon="location" is-link @click="sorry" />
+      <van-cell title="线下门店" icon="location" is-link @click="sorry"></van-cell>
     </van-cell-group>
 
     <van-cell-group class="goods-cell-group">
-      <van-cell title="查看商品详情" is-link @click="sorry" />
+      <van-cell title="查看商品详情" is-link @click="sorry"></van-cell>
     </van-cell-group>
 
     <van-goods-action>

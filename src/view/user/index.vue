@@ -31,7 +31,7 @@
         </div>
         <van-row class="user-links">
             <van-col span="6">
-                <van-icon name="pending-payment"/>
+                <van-icon name="pending-payment"></van-icon>
                 待付款
             </van-col>
             <van-col span="6">

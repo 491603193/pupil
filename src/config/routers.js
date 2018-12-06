@@ -1,7 +1,7 @@
 const routes = [
     {
         path: '*',
-        redirect: '/goods'
+        redirect: '/index'
     },
     {
         name: 'hello',
@@ -14,7 +14,7 @@ const routes = [
         name: 'login',
         component: () => import('../view/app/Login.vue'),
         meta: {
-            title: '一个可以凑合用的购物网站'
+            title: '一个凑合用的购物网站'
         }
     },
     {

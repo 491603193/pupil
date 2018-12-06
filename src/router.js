@@ -17,7 +17,7 @@ router.beforeEach((to, from, next) => {
     if (title) {
         document.title = title;
     }
-    const nextRoute = ['login', 'index']; //不需要过滤的
+    const nextRoute = ['login']; //不需要过滤的
     let isLogin = getLocalStorage("isLogin");  // 是否登录
     // 未登录状态；当路由到nextRoute指定页时，跳转至login
     if (nextRoute.indexOf(to.name) < 0) {
