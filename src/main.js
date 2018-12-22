@@ -1,9 +1,10 @@
 import './common/rem';
+import './style/base.css'
+import './style/animation.css'
 import Vue from 'vue';
 import App from './App.vue';
 import {router} from './router';
 import store from './store'
-import './style/base.css'
 
 import { Row, Cell, CellGroup ,Field,Button,Icon  } from 'vant';
 

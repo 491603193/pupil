@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <transition name="fade">
+    <div style="height:100%;">
         <div class="center-top bg-cover">
             <header>
                 <h4 class="title">个人中心</h4>
@@ -12,7 +13,7 @@
                 <div class="desc flex-1">
                     <div class="name">{{userName}}</div>
                     <div class="rank">
-                        <van-icon name="success"/>
+                        <van-icon name="like-o"></van-icon>
                         金牌店长
                     </div>
                     <div class="income" @click="initItem()">本月团队绩效：11111元</div>
@@ -58,11 +59,12 @@
             <van-cell icon="gift" title="我收到的礼物" is-link></van-cell>
         </van-cell-group>
     </div>
+    </transition>
 </template>
 
 <script>
     import {Row, Col, Icon, Cell, CellGroup} from 'vant';
-    import {getLocalStorage, setLocalStorage} from '../../common/utils/Location.js'
+    import { getLocalStorage } from '../../common/utils/Location.js'
 
     export default {
         components: {

@@ -1,8 +1,8 @@
 {
-  "name": "vant-demo",
+  "name": "pupil-demo",
   "version": "1.0.0",
   "description": "Collection of vant demos.",
-  "author": "陈嘉涵 <chenjiahan@youzan.com>",
+  "author": "yiyk <491603193@qq.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

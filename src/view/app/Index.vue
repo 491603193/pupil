@@ -1,7 +1,7 @@
 <template>
-    <div style="height:100%;">
+    <div>
         <keep-alive>
-            <component v-bind:is="currentTabComponent"/>
+                <component v-bind:is="currentTabComponent" />
         </keep-alive>
         <van-tabbar v-model="active">
             <van-tabbar-item icon="shop">商品</van-tabbar-item>
@@ -46,7 +46,4 @@
     }
 </script>
 <style>
-    .view-box {
-        position: absolute
-    }
 </style>

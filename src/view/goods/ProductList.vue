@@ -1,4 +1,5 @@
 <template>
+  <transition name="fade">
   <div class="goods-list" style="height: 100%">
     <div class="search-wrap horizontal" transition="expand" :v-show="true">
       <div class="flex-1 horizontal search-border">
@@ -11,8 +12,122 @@
         <van-icon class="search" name="search"></van-icon>
         筛选</a>
     </div>
-    <div style="height: calc(100vh - 53px);">
+    <div style="height: calc(100vh - 103px);">
       <ul>
+        <li v-for="(index,entity) in entities" :key="entity.productId"
+            @click="openGoodsDetail(entity.productId)">
+          <div class="horizontal">
+            <img :src="entity.loadingImage==='none'? loadingImg : entity.loadingImage" alt="">
+            <div class="flex-1">
+              <div class="title ellipsis">{{entity.productName}}</div>
+              <div class="detail">{{entity.description}}</div>
+              <div class="address-wrap ellipsis">
+                <span class="place ellipsis" v-if="!!entity.place">{{entity.place}}</span>
+                <span class="" v-if="!!entity.salesHeat"> &nbsp; &nbsp; 销量: {{entity.salesHeat}}</span>
+                <span class="" style="float: right;">单价 {{entity.showPrice/entity.productNum}}元</span>
+              </div>
+              <div class="money-wrap ellipsis" style="">
+                <span class="color-red">¥<span class="money">{{entity.showPrice}}</span></span>
+                <span class="line-through">建议价 {{entity.classDPrice}}元</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li v-for="(index,entity) in entities" :key="entity.productId"
+            @click="openGoodsDetail(entity.productId)">
+          <div class="horizontal">
+            <img :src="entity.loadingImage==='none'? loadingImg : entity.loadingImage" alt="">
+            <div class="flex-1">
+              <div class="title ellipsis">{{entity.productName}}</div>
+              <div class="detail">{{entity.description}}</div>
+              <div class="address-wrap ellipsis">
+                <span class="place ellipsis" v-if="!!entity.place">{{entity.place}}</span>
+                <span class="" v-if="!!entity.salesHeat"> &nbsp; &nbsp; 销量: {{entity.salesHeat}}</span>
+                <span class="" style="float: right;">单价 {{entity.showPrice/entity.productNum}}元</span>
+              </div>
+              <div class="money-wrap ellipsis" style="">
+                <span class="color-red">¥<span class="money">{{entity.showPrice}}</span></span>
+                <span class="line-through">建议价 {{entity.classDPrice}}元</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li v-for="(index,entity) in entities" :key="entity.productId"
+            @click="openGoodsDetail(entity.productId)">
+          <div class="horizontal">
+            <img :src="entity.loadingImage==='none'? loadingImg : entity.loadingImage" alt="">
+            <div class="flex-1">
+              <div class="title ellipsis">{{entity.productName}}</div>
+              <div class="detail">{{entity.description}}</div>
+              <div class="address-wrap ellipsis">
+                <span class="place ellipsis" v-if="!!entity.place">{{entity.place}}</span>
+                <span class="" v-if="!!entity.salesHeat"> &nbsp; &nbsp; 销量: {{entity.salesHeat}}</span>
+                <span class="" style="float: right;">单价 {{entity.showPrice/entity.productNum}}元</span>
+              </div>
+              <div class="money-wrap ellipsis" style="">
+                <span class="color-red">¥<span class="money">{{entity.showPrice}}</span></span>
+                <span class="line-through">建议价 {{entity.classDPrice}}元</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li v-for="(index,entity) in entities" :key="entity.productId"
+            @click="openGoodsDetail(entity.productId)">
+          <div class="horizontal">
+            <img :src="entity.loadingImage==='none'? loadingImg : entity.loadingImage" alt="">
+            <div class="flex-1">
+              <div class="title ellipsis">{{entity.productName}}</div>
+              <div class="detail">{{entity.description}}</div>
+              <div class="address-wrap ellipsis">
+                <span class="place ellipsis" v-if="!!entity.place">{{entity.place}}</span>
+                <span class="" v-if="!!entity.salesHeat"> &nbsp; &nbsp; 销量: {{entity.salesHeat}}</span>
+                <span class="" style="float: right;">单价 {{entity.showPrice/entity.productNum}}元</span>
+              </div>
+              <div class="money-wrap ellipsis" style="">
+                <span class="color-red">¥<span class="money">{{entity.showPrice}}</span></span>
+                <span class="line-through">建议价 {{entity.classDPrice}}元</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li v-for="(index,entity) in entities" :key="entity.productId"
+            @click="openGoodsDetail(entity.productId)">
+          <div class="horizontal">
+            <img :src="entity.loadingImage==='none'? loadingImg : entity.loadingImage" alt="">
+            <div class="flex-1">
+              <div class="title ellipsis">{{entity.productName}}</div>
+              <div class="detail">{{entity.description}}</div>
+              <div class="address-wrap ellipsis">
+                <span class="place ellipsis" v-if="!!entity.place">{{entity.place}}</span>
+                <span class="" v-if="!!entity.salesHeat"> &nbsp; &nbsp; 销量: {{entity.salesHeat}}</span>
+                <span class="" style="float: right;">单价 {{entity.showPrice/entity.productNum}}元</span>
+              </div>
+              <div class="money-wrap ellipsis" style="">
+                <span class="color-red">¥<span class="money">{{entity.showPrice}}</span></span>
+                <span class="line-through">建议价 {{entity.classDPrice}}元</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li v-for="(index,entity) in entities" :key="entity.productId"
+            @click="openGoodsDetail(entity.productId)">
+          <div class="horizontal">
+            <img :src="entity.loadingImage==='none'? loadingImg : entity.loadingImage" alt="">
+            <div class="flex-1">
+              <div class="title ellipsis">{{entity.productName}}</div>
+              <div class="detail">{{entity.description}}</div>
+              <div class="address-wrap ellipsis">
+                <span class="place ellipsis" v-if="!!entity.place">{{entity.place}}</span>
+                <span class="" v-if="!!entity.salesHeat"> &nbsp; &nbsp; 销量: {{entity.salesHeat}}</span>
+                <span class="" style="float: right;">单价 {{entity.showPrice/entity.productNum}}元</span>
+              </div>
+              <div class="money-wrap ellipsis" style="">
+                <span class="color-red">¥<span class="money">{{entity.showPrice}}</span></span>
+                <span class="line-through">建议价 {{entity.classDPrice}}元</span>
+              </div>
+            </div>
+          </div>
+        </li>
         <li v-for="(index,entity) in entities" :key="entity.productId"
             @click="openGoodsDetail(entity.productId)">
           <div class="horizontal">
@@ -38,6 +153,7 @@
       </ul>
     </div>
   </div>
+  </transition>
 </template>
 <script>
 
@@ -68,9 +184,7 @@
       }
     },
     methods: {
-      search (valve) {
-
-
+      search () {
       },
       processButton001 () {
         this.show = true

@@ -282,8 +282,11 @@ select:focus {
 
 .center-top {
     background-image: url("../assets/user-center.png");
-
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;
 }
+
 .center-top header {
     background-color: transparent;
     border-bottom: 0;
@@ -656,4 +659,10 @@ img.width-full {
     border-bottom: 0;
     color: #fee;
 }
-
+.app-view {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}

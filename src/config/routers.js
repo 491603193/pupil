@@ -14,7 +14,7 @@ const routes = [
         name: 'login',
         component: () => import('../view/app/Login.vue'),
         meta: {
-            title: '一个凑合用的购物网站'
+            title: '凑合的购物网站'
         }
     },
     {

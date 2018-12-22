@@ -1,7 +1,9 @@
 <template>
-    <div>
+    <transition name="fade">
+    <div style="height: 100%">
         <h4>暂无消息</h4>
     </div>
+    </transition>
 </template>
 
 <script>
